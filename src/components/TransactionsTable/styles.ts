@@ -27,9 +27,9 @@ td{
    &.deposit{
     color: var(--green);
    }
-   &.withdrow{
+   &.withdraw{
     color: var(--red);
    }
 }
 
-`
+`;

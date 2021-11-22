@@ -1,5 +1,5 @@
 import { Summary } from "../Summary";
-import { TransctionsTable } from "../TransctionsTable";
+import { TransctionsTable } from "../TransactionsTable";
 import { Container } from "./styles";
 
 export function Deshboard(){

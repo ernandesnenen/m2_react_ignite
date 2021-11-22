@@ -2,9 +2,11 @@
 import { GlobalStyle } from './styles/global';
 import {Header} from './components/Header'
 import { Deshboard } from './components/Deshboard';
-import { NewTransactionModal } from './components/NewTrasectionModal';
+import { NewTransactionModal } from './components/NewTransactionModal';
 import Modal from 'react-modal'
 import { useState } from 'react'
+import { TransactionsProvider} from './Context/TransactionsContext';
+
 
 
 Modal.setAppElement('#root');
@@ -19,12 +21,12 @@ export function App() {
   }
 // ---------------------------------------------------------------------------------------
   return (
-    <div className="App">
+    <TransactionsProvider >
         <Header  onOpenNewTransactionModal={handleOpenNewIstransactionModal}/>
         <Deshboard />
        <NewTransactionModal isOpen={isNewTransactionModalOpen} onRequestClose={handleCloseIstransactionModal}/>
-       <GlobalStyle /> 
-    </div>
+       <GlobalStyle />       
+    </TransactionsProvider>
   );
 }
 
